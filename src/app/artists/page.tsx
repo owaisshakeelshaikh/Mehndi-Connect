@@ -1,0 +1,130 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { SlidersHorizontal, Map, GitCompareArrows, Search } from "lucide-react";
+import { PublicLayout } from "@/components/site-shell";
+import { ArtistCard, artists, Eyebrow } from "@/components/marketplace";
+import { Button } from "@/components/ui/button";
+
+
+export const metadata: Metadata = {
+  title: "Find Mehndi Artists Near You — Mehndi Connect",
+  description: "Compare verified Mehndi artists by location, style, price, rating, and availability.",
+  openGraph: {
+    title: "Find Mehndi Artists — Mehndi Connect",
+    description: "Discover and compare verified local Mehndi artists.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Find Mehndi Artists — Mehndi Connect",
+    description: "Discover and compare verified local Mehndi artists.",
+  },
+};
+
+function ArtistsPage() {
+  return (
+    <PublicLayout>
+      <main>
+        <section className="bg-primary px-5 py-20 text-primary-foreground md:px-8 md:py-28">
+          <div className="mx-auto max-w-[1440px]">
+            <Eyebrow>Nearby discovery</Eyebrow>
+            <h1 className="max-w-4xl text-6xl leading-none md:text-8xl">
+              Find beautiful work, close to home.
+            </h1>
+            <div className="mt-10 grid rounded-md border border-secondary/20 md:grid-cols-[1.2fr_1fr_1fr_auto]">
+              {["Mumbai, Maharashtra", "Bridal & Arabic", "21 September"].map((v, i) => (
+                <label
+                  key={v}
+                  className="border-b border-secondary/20 px-5 py-4 md:border-b-0 md:border-r"
+                >
+                  <span className="block text-[9px] uppercase text-secondary">
+                    {["Location", "Style", "Date"][i]}
+                  </span>
+                  <input
+                    aria-label={["Location", "Style", "Date"][i]}
+                    defaultValue={v}
+                    className="mt-1 w-full bg-transparent text-sm outline-none"
+                  />
+                </label>
+              ))}
+              <Button variant="inverse" size="editorial" className="m-2 h-auto">
+                <Search />
+                Search
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className="px-5 py-8 md:px-8">
+          <div className="mx-auto flex max-w-[1440px] flex-wrap gap-2">
+            {[
+              "Available today",
+              "Home visit",
+              "Verified",
+              "Under ₹5,000",
+              "4.8+ rating",
+              "Within 5 km",
+              "Female artist",
+              "Bridal specialist",
+            ].map((x) => (
+              <Button key={x} variant="quiet" size="sm">
+                {x}
+              </Button>
+            ))}
+            <Button variant="editorial" size="sm">
+              <SlidersHorizontal />
+              All filters
+            </Button>
+          </div>
+        </section>
+        <section className="px-5 pb-24 md:px-8">
+          <div className="mx-auto max-w-[1440px]">
+            <div className="mb-8 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4">
+              <div>
+                <h2 className="text-4xl">48 artists near Mumbai</h2>
+                <p className="text-sm text-muted-foreground">Sorted by best match for your date</p>
+              </div>
+              <Button variant="quiet">
+                <Map />
+                Map view
+              </Button>
+            </div>
+            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+              {[...artists, ...artists].map((a, i) => (
+                <ArtistCard key={`${a.name}-${i}`} artist={a} />
+              ))}
+            </div>
+            <div className="mt-16 border-y border-border py-10 text-center">
+              <GitCompareArrows className="mx-auto mb-3" />
+              <h3 className="text-3xl">Shortlist and compare</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Compare availability, pricing, reviews, and portfolio styles side by side.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="bg-secondary px-5 py-20 md:px-8">
+          <div className="mx-auto max-w-[1440px]">
+            <Eyebrow>Popular locations</Eyebrow>
+            <div className="flex flex-wrap gap-x-8 gap-y-4 font-display text-3xl">
+              {["Mumbai", "Andheri", "Goregaon", "Malad", "Thane", "Navi Mumbai", "Bandra"].map(
+                (x) => (
+                  <Link key={x} href="/artists" className="border-b border-foreground/20">
+                    {x}
+                  </Link>
+                ),
+              )}
+            </div>
+            <p className="mt-12 max-w-3xl text-sm leading-7 text-muted-foreground">
+              Explore verified bridal, Arabic, minimal, and festival Mehndi artists across Mumbai.
+              Compare portfolios, home-visit availability, transparent starting prices, and trusted
+              reviews before you book.
+            </p>
+          </div>
+        </section>
+      </main>
+    </PublicLayout>
+  );
+}
+
+
+export default ArtistsPage;

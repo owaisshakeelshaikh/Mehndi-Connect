@@ -1,0 +1,106 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { PublicLayout } from "@/components/site-shell";
+import { designs, Eyebrow, SectionHeading } from "@/components/marketplace";
+import hero from "@/assets/mehndi-hero.jpg";
+
+export const metadata: Metadata = {
+  title: "Mehndi Inspiration, Artist Stories & City Guides",
+  description: "Editorial Mehndi design inspiration, bridal guides, artist stories, and city discovery.",
+  openGraph: {
+    title: "The Mehndi Connect Journal",
+    description: "Stories, designs, and working artists from across India.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Mehndi Connect Journal",
+    description: "Stories, designs, and working artists from across India.",
+  },
+};
+
+function Journal() {
+  const stories = [
+    "The new language of bridal Mehndi",
+    "Inside a home studio in Bandra",
+    "A guide to Arabic flow and negative space",
+    "The quiet return of the mandala",
+  ];
+  return (
+    <PublicLayout>
+      <main>
+        <section className="relative min-h-[80vh] bg-primary text-primary-foreground">
+          <img
+            src={hero.src}
+            alt="Mehndi artist at work for the featured story"
+            width={1920}
+            height={1280}
+            className="absolute inset-0 h-full w-full object-cover opacity-55"
+          />
+          <div className="relative mx-auto flex min-h-[80vh] max-w-[1440px] flex-col justify-end px-5 pb-16 md:px-8">
+            <Eyebrow>Featured story · Craft</Eyebrow>
+            <h1 className="max-w-4xl text-7xl leading-[0.86] md:text-9xl">
+              The hands shaping a modern tradition.
+            </h1>
+            <Link href="/about" className="mt-8 flex items-center gap-2 text-xs uppercase">
+              Read the story <ArrowRight />
+            </Link>
+          </div>
+        </section>
+        <section className="px-5 py-24 md:px-8">
+          <div className="mx-auto max-w-[1440px]">
+            <SectionHeading eyebrow="Latest" title="Stories worth keeping." />
+            <div className="grid gap-12 md:grid-cols-2">
+              {stories.map((story, i) => (
+                <article key={story} className={i % 2 ? "md:mt-20" : ""}>
+                  <img
+                    src={designs[i]!.image.src}
+                    alt={story}
+                    width={912}
+                    height={1200}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                  <p className="mt-5 text-[10px] uppercase text-muted-foreground">
+                    {["Bridal guide", "Artist story", "Design literacy", "Inspiration"][i]}
+                  </p>
+                  <h2 className="mt-2 text-4xl">{story}</h2>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                    A closer look at the artists, references, and changing visual culture behind the
+                    work.
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="bg-secondary px-5 py-24 md:px-8">
+          <div className="mx-auto max-w-[1440px]">
+            <SectionHeading eyebrow="City guides" title="Find the work around you." />
+            <div className="divide-y divide-border border-y border-border">
+              {[
+                "Best Mehndi Artists in Mumbai",
+                "Bridal Mehndi Artists in Andheri",
+                "Arabic Mehndi Artists in Mumbai",
+                "Mehndi Artists in Thane",
+              ].map((x) => (
+                <Link
+                  key={x}
+                  href="/artists"
+                  className="flex items-center justify-between py-6 font-display text-3xl"
+                >
+                  {x}
+                  <ArrowRight />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+    </PublicLayout>
+  );
+}
+
+
+export default Journal;

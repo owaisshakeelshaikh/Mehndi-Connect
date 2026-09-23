@@ -1,0 +1,10 @@
+{
+  // Tailwind CSS v4 syntax (@theme, @utility, @source, @custom-variant, and
+  // `@import "tailwindcss" source(none)`) is valid but unknown to the built-in
+  // CSS language server, producing false-positive errors in globals.css.
+  // Disable its validation; the Tailwind CSS IntelliSense extension
+  // (recommended in extensions.json) provides v4-aware linting instead.
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false
+}
