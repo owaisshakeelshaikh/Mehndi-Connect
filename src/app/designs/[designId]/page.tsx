@@ -37,26 +37,26 @@ function Detail() {
             <div>
               <Eyebrow>Design no. 024</Eyebrow>
               <h1 className="text-7xl">The Bridal Edit</h1>
-              <p className="mt-5 text-sm leading-7 text-secondary">
+              <p className="mt-5 text-sm leading-7 text-primary-foreground/70">
                 Dense floral storytelling, architectural bands, and a deep stain—made for a long,
                 unhurried bridal sitting.
               </p>
-              <div className="mt-8 grid grid-cols-2 gap-5 border-y border-secondary/20 py-6 text-sm">
+              <div className="mt-8 grid grid-cols-2 gap-5 border-y border-primary-foreground/15 py-6 text-sm text-primary-foreground/80">
                 <span>
-                  <Sparkles className="mb-2" />
+                  <Sparkles className="mb-2 size-4 text-gold" />
                   Traditional bridal
                 </span>
                 <span>
-                  <Clock className="mb-2" />
+                  <Clock className="mb-2 size-4 text-gold" />
                   6–8 hours
                 </span>
                 <span>
-                  <Gauge className="mb-2" />
+                  <Gauge className="mb-2 size-4 text-gold" />
                   High complexity
                 </span>
                 <span>Wedding · Full hands</span>
               </div>
-              <Button asChild variant="inverse" size="editorial" className="mt-8">
+              <Button asChild variant="gold" size="editorial" className="mt-8 font-semibold">
                 <Link href="/artists">Find an artist for this design</Link>
               </Button>
             </div>

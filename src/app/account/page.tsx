@@ -41,24 +41,28 @@ function Account() {
         <Metric label="Saved designs" value="18" note="4 new similar looks" />
         <Metric label="Reward balance" value="₹850" note="Use on your next booking" />
       </div>
-      <section className="mt-12 grid gap-6 bg-primary p-6 text-primary-foreground md:grid-cols-[180px_1fr_auto] md:items-center">
+      <section className="mt-12 grid gap-6 rounded-2xl bg-primary p-6 text-primary-foreground shadow-[0_20px_50px_-20px_rgba(15,43,32,0.4)] md:grid-cols-[180px_1fr_auto] md:items-center md:p-8">
         <img
           src={ananya.src}
           alt="Ananya Kulkarni"
           width={912}
           height={1200}
-          className="aspect-square w-full object-cover"
+          className="aspect-square w-full rounded-xl object-cover"
         />
         <div>
-          <p className="text-[10px] uppercase text-secondary">Upcoming booking</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
+            Upcoming booking
+          </p>
           <h2 className="mt-2 text-4xl">Bridal session with Ananya</h2>
-          <p className="mt-2 text-sm text-secondary">24 September · 4:00 PM · Bandra West</p>
-          <p className="mt-5 flex gap-2 text-xs text-secondary">
-            <ShieldCheck className="size-4" />
+          <p className="mt-2 text-sm text-primary-foreground/70">
+            24 September · 4:00 PM · Bandra West
+          </p>
+          <p className="mt-5 flex gap-2 text-xs text-primary-foreground/70">
+            <ShieldCheck className="size-4 text-gold" />
             Protected booking · ₹2,400 advance paid
           </p>
         </div>
-        <Button variant="inverse">View details</Button>
+        <Button variant="gold" className="font-semibold">View details</Button>
       </section>
       <section className="mt-14">
         <p className="text-[10px] uppercase text-muted-foreground">Retention, built on trust</p>
