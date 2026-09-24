@@ -41,13 +41,13 @@ function Journal() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-primary/30" />
           <div className="relative mx-auto flex min-h-[80vh] max-w-[1440px] flex-col justify-end px-5 pb-16 md:px-8">
-            <Eyebrow>Featured story · Craft</Eyebrow>
+            <Eyebrow tone="dark">Featured story · Craft</Eyebrow>
             <h1 className="max-w-4xl text-7xl leading-[0.9] md:text-9xl">
-              The hands shaping a <em className="text-gold">modern tradition.</em>
+              The hands shaping a <em className="text-ivory">modern tradition.</em>
             </h1>
             <Link
               href="/about"
-              className="group mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gold"
+              className="group mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-ivory"
             >
               <span className="link-underline">Read the story</span>
               <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -65,7 +65,7 @@ function Journal() {
                   className={i % 2 ? "md:mt-20" : ""}
                 >
                   <article className="group">
-                    <div className="overflow-hidden rounded-2xl shadow-[0_16px_44px_-18px_rgba(15,43,32,0.3)]">
+                    <div className="overflow-hidden rounded-2xl shadow-[0_16px_44px_-18px_rgba(17,18,13,0.3)]">
                       <img
                         src={designs[i]!.image.src}
                         alt={story}

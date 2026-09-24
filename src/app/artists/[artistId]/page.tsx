@@ -42,22 +42,22 @@ function Profile() {
           </div>
           <div className="flex items-end p-6 md:p-12">
             <div className="w-full">
-              <Eyebrow>Verified creator profile</Eyebrow>
+              <Eyebrow tone="dark">Verified creator profile</Eyebrow>
               <h1 className="text-6xl md:text-8xl">Ananya Kulkarni</h1>
-              <p className="mt-3 text-gold">Contemporary Arabic · Bridal specialist</p>
+              <p className="mt-3 text-ivory">Contemporary Arabic · Bridal specialist</p>
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 border-y border-primary-foreground/15 py-5 text-sm text-primary-foreground/80">
                 <span className="flex items-center gap-2">
-                  <BadgeCheck className="size-4 text-gold" /> Portfolio verified
+                  <BadgeCheck className="size-4 text-ivory" /> Portfolio verified
                 </span>
                 <span className="flex items-center gap-2">
-                  <Star className="size-4 fill-gold text-gold" /> 4.9 · 124 reviews
+                  <Star className="size-4 fill-ivory text-ivory" /> 4.9 · 124 reviews
                 </span>
                 <span className="flex items-center gap-2">
-                  <MapPin className="size-4 text-gold" /> Bandra · 15 km radius
+                  <MapPin className="size-4 text-ivory" /> Bandra · 15 km radius
                 </span>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Button asChild variant="gold" size="editorial" className="font-semibold">
+                <Button asChild variant="inverse" size="editorial" className="font-semibold">
                   <Link href="/bookings">Book Ananya</Link>
                 </Button>
                 <p className="text-sm text-primary-foreground/70">
@@ -140,7 +140,7 @@ function Profile() {
                 ].map((q, i) => (
                   <blockquote
                     key={q}
-                    className="rounded-2xl bg-card p-7 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(15,43,32,0.15)]"
+                    className="rounded-2xl bg-card p-7 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(17,18,13,0.15)]"
                   >
                     <div className="mb-5 flex gap-1 text-gold">
                       {[...Array(5)].map((_, s) => (
@@ -156,7 +156,7 @@ function Profile() {
               </div>
             </section>
           </div>
-          <aside className="h-fit rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(15,43,32,0.25)] lg:sticky lg:top-24">
+          <aside className="h-fit rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(17,18,13,0.25)] lg:sticky lg:top-24">
             <img
               src={bridal.src}
               alt="Ananya's featured bridal Mehndi design"

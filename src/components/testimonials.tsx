@@ -54,7 +54,7 @@ export function Testimonials() {
   }, [paused]);
 
   const arrowClass =
-    "flex size-9 shrink-0 items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/70 transition-all duration-300 hover:border-gold hover:text-gold";
+    "flex size-9 shrink-0 items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/70 transition-all duration-300 hover:border-ivory hover:text-ivory";
 
   return (
     <section
@@ -64,7 +64,7 @@ export function Testimonials() {
     >
       <div className="mx-auto grid max-w-[1240px] gap-8 lg:grid-cols-[0.8fr_1.6fr] lg:items-center">
         <div>
-          <p className="mb-4 flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.24em] text-gold">
+          <p className="mb-4 flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.24em] text-ivory">
             <span className="h-px w-5 bg-current opacity-60" aria-hidden />
             Clients love our work
           </p>
@@ -84,7 +84,7 @@ export function Testimonials() {
                 className={cn(
                   "h-1 rounded-full transition-all duration-500 ease-editorial",
                   i === index
-                    ? "w-6 bg-gold"
+                    ? "w-6 bg-ivory"
                     : "w-2.5 bg-primary-foreground/20 hover:bg-primary-foreground/40",
                 )}
               />
@@ -113,14 +113,14 @@ export function Testimonials() {
               )}
             >
               <div>
-                <span className="font-display text-4xl leading-none text-gold" aria-hidden>
+                <span className="font-display text-4xl leading-none text-ivory" aria-hidden>
                   &ldquo;
                 </span>
                 <blockquote className="mt-1 font-display text-base leading-relaxed text-primary-foreground/90 md:text-lg">
                   {t.quote}
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-2.5">
-                  <span className="flex gap-0.5 text-gold">
+                  <span className="flex gap-0.5 text-ivory">
                     {[...Array(5)].map((_, s) => (
                       <Star key={s} className="size-3 fill-current" />
                     ))}
@@ -137,7 +137,7 @@ export function Testimonials() {
                   width={912}
                   height={1200}
                   loading="lazy"
-                  className="size-12 rounded-full object-cover ring-2 ring-gold/60 md:size-14"
+                  className="size-12 rounded-full object-cover ring-2 ring-ivory/60 md:size-14"
                 />
                 <div>
                   <p className="text-[13px] font-bold">{t.name}</p>

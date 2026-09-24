@@ -36,14 +36,14 @@ function ArtistsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/40" />
           <div className="relative mx-auto max-w-[1440px]">
-            <Eyebrow>Nearby discovery</Eyebrow>
+            <Eyebrow tone="dark">Nearby discovery</Eyebrow>
             <h1 className="max-w-4xl text-6xl leading-[0.95] md:text-8xl">
               Find beautiful work, <em>close to home.</em>
             </h1>
           </div>
         </section>
         <div className="relative z-10 -mt-14 px-5 md:px-8">
-          <div className="mx-auto grid max-w-[1240px] overflow-hidden rounded-2xl bg-card shadow-[0_24px_60px_-20px_rgba(15,43,32,0.35)] ring-1 ring-border md:grid-cols-[1.2fr_1fr_1fr_auto]">
+          <div className="mx-auto grid max-w-[1240px] overflow-hidden rounded-2xl bg-card shadow-[0_24px_60px_-20px_rgba(17,18,13,0.35)] ring-1 ring-border md:grid-cols-[1.2fr_1fr_1fr_auto]">
             {[
               { label: "Location", value: "Mumbai, Maharashtra", icon: MapPin },
               { label: "Style", value: "Bridal & Arabic", icon: Sparkles },

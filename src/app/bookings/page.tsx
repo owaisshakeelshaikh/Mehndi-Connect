@@ -24,18 +24,18 @@ function Booking() {
     <main className="min-h-screen bg-background">
       <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center border-b border-border bg-primary px-5 py-4 text-primary-foreground md:px-8">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex size-8 items-center justify-center rounded-lg border border-gold/40 bg-gold/10 text-gold">
+          <span className="flex size-8 items-center justify-center rounded-lg border border-ivory/40 bg-ivory/10 text-ivory">
             <Flower2 className="size-4" strokeWidth={1.75} />
           </span>
           <span className="leading-none">
             <span className="block font-sans text-sm font-extrabold tracking-[0.16em]">MEHNDI</span>
-            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-gold">
+            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-ivory">
               CONNECT
             </span>
           </span>
         </Link>
         <span className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground/70">
-          <ShieldCheck className="size-4 text-gold" /> Protected booking
+          <ShieldCheck className="size-4 text-ivory" /> Protected booking
         </span>
       </header>
       <div className="h-1 bg-secondary">
@@ -55,7 +55,7 @@ function Booking() {
           <div className="mt-10 min-h-72 border-y border-border py-7">
             {step === 9 ? (
               <div>
-                <span className="mb-6 flex size-14 items-center justify-center rounded-full bg-primary text-gold">
+                <span className="mb-6 flex size-14 items-center justify-center rounded-full bg-primary text-ivory">
                   <Check className="size-7" />
                 </span>
                 <p className="text-lg">
@@ -109,7 +109,7 @@ function Booking() {
             </Button>
           </div>
         </section>
-        <aside className="h-fit rounded-2xl bg-card p-5 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(15,43,32,0.25)] md:sticky md:top-8">
+        <aside className="h-fit rounded-2xl bg-card p-5 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(17,18,13,0.25)] md:sticky md:top-8">
           <img
             src={ananya.src}
             alt="Ananya Kulkarni"

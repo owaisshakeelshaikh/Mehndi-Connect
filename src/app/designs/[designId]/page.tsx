@@ -35,7 +35,7 @@ function Detail() {
           />
           <div className="flex items-end p-6 md:p-12">
             <div>
-              <Eyebrow>Design no. 024</Eyebrow>
+              <Eyebrow tone="dark">Design no. 024</Eyebrow>
               <h1 className="text-7xl">The Bridal Edit</h1>
               <p className="mt-5 text-sm leading-7 text-primary-foreground/70">
                 Dense floral storytelling, architectural bands, and a deep stain—made for a long,
@@ -43,20 +43,20 @@ function Detail() {
               </p>
               <div className="mt-8 grid grid-cols-2 gap-5 border-y border-primary-foreground/15 py-6 text-sm text-primary-foreground/80">
                 <span>
-                  <Sparkles className="mb-2 size-4 text-gold" />
+                  <Sparkles className="mb-2 size-4 text-ivory" />
                   Traditional bridal
                 </span>
                 <span>
-                  <Clock className="mb-2 size-4 text-gold" />
+                  <Clock className="mb-2 size-4 text-ivory" />
                   6–8 hours
                 </span>
                 <span>
-                  <Gauge className="mb-2 size-4 text-gold" />
+                  <Gauge className="mb-2 size-4 text-ivory" />
                   High complexity
                 </span>
                 <span>Wedding · Full hands</span>
               </div>
-              <Button asChild variant="gold" size="editorial" className="mt-8 font-semibold">
+              <Button asChild variant="inverse" size="editorial" className="mt-8 font-semibold">
                 <Link href="/artists">Find an artist for this design</Link>
               </Button>
             </div>

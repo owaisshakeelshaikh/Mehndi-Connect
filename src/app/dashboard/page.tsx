@@ -52,7 +52,7 @@ function Dashboard() {
             </div>
             <span className="text-xs text-muted-foreground">Respond in 42 min</span>
           </div>
-          <article className="rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(15,43,32,0.15)]">
+          <article className="rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(17,18,13,0.15)]">
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <p className="text-[10px] uppercase text-muted-foreground">Customer</p>
