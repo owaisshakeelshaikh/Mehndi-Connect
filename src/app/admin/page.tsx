@@ -44,7 +44,7 @@ function Admin() {
         <section>
           <p className="text-[10px] uppercase text-muted-foreground">Verification queue</p>
           <h2 className="mt-2 text-4xl">Artists ready for review</h2>
-          <div className="mt-6 divide-y divide-border border-y border-border">
+          <div className="mt-6 divide-y divide-border rounded-2xl bg-card px-6 ring-1 ring-border">
             {[
               "Nisha Verma · Pune · 24 portfolio images",
               "Farah Ansari · Mumbai · Identity resubmitted",
@@ -60,10 +60,10 @@ function Admin() {
             ))}
           </div>
         </section>
-        <section className="bg-primary p-7 text-primary-foreground">
-          <ShieldCheck className="mb-7 text-secondary" />
+        <section className="rounded-2xl bg-primary p-8 text-primary-foreground shadow-[0_20px_50px_-20px_rgba(15,43,32,0.4)]">
+          <ShieldCheck className="mb-7 text-gold" />
           <h2 className="text-5xl">Trust is a product surface.</h2>
-          <p className="mt-5 text-sm leading-7 text-secondary">
+          <p className="mt-5 text-sm leading-7 text-primary-foreground/70">
             Artist verification, portfolio authenticity, secure payments, cancellation support,
             response quality, and review integrity are monitored together—not as separate admin
             chores.

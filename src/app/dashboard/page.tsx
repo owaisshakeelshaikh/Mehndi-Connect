@@ -47,12 +47,12 @@ function Dashboard() {
         <section>
           <div className="mb-5 flex items-end justify-between">
             <div>
-              <p className="text-[10px] uppercase text-muted-foreground">Action required</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Action required</p>
               <h2 className="text-4xl">New booking request</h2>
             </div>
             <span className="text-xs text-muted-foreground">Respond in 42 min</span>
           </div>
-          <article className="border border-border p-6">
+          <article className="rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(15,43,32,0.15)]">
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <p className="text-[10px] uppercase text-muted-foreground">Customer</p>
@@ -77,8 +77,8 @@ function Dashboard() {
             </div>
           </article>
         </section>
-        <section className="bg-secondary p-6">
-          <p className="text-[10px] uppercase text-muted-foreground">Repeat customers</p>
+        <section className="rounded-2xl bg-secondary p-6 ring-1 ring-border">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Repeat customers</p>
           <h2 className="mt-2 text-4xl">People who know your work.</h2>
           <div className="mt-6 divide-y divide-border">
             {[

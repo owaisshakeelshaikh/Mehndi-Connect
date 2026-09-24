@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, CreditCard, Headphones, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Eyebrow, PageIntro, SectionHeading } from "@/components/marketplace";
+import { Reveal } from "@/components/reveal";
 import { PublicLayout } from "@/components/site-shell";
 import hero from "@/assets/mehndi-hero.jpg";
 import artist from "@/assets/artist-meera.jpg";
@@ -49,16 +50,17 @@ export function EditorialPage({
                   : "Every interaction is designed around transparency, care, and trust."
               }
             />
-            <div className="grid border-l border-t border-border md:grid-cols-3">
-              {chapters.map((c) => (
-                <article
+            <div className="grid gap-5 md:grid-cols-3">
+              {chapters.map((c, i) => (
+                <Reveal
                   key={c.number}
-                  className="min-h-64 border-b border-r border-border p-7 md:p-10"
+                  delay={i * 90}
+                  className="min-h-64 rounded-2xl bg-card p-7 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(15,43,32,0.15)] transition-shadow duration-500 hover:shadow-[0_16px_40px_-16px_rgba(15,43,32,0.25)] md:p-10"
                 >
-                  <span className="font-display text-5xl text-muted-foreground/30">{c.number}</span>
-                  <h3 className="mt-12 font-sans text-lg font-semibold">{c.title}</h3>
+                  <span className="font-display text-5xl text-gold/60">{c.number}</span>
+                  <h3 className="mt-12 font-sans text-lg font-bold">{c.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">{c.copy}</p>
-                </article>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -77,38 +79,39 @@ export function EditorialPage({
               <Eyebrow>
                 {mode === "artist" ? "Built for independent artists" : "Platform protection"}
               </Eyebrow>
-              <h2 className="max-w-xl text-6xl leading-none">
+              <h2 className="max-w-xl text-5xl leading-[1] md:text-6xl">
                 {mode === "artist"
                   ? "A livelihood should not require a storefront."
                   : "Stay for the value, not the restriction."}
               </h2>
-              <p className="mt-7 max-w-lg leading-8 text-muted-foreground">
+              <p className="mt-7 max-w-lg text-sm leading-8 text-muted-foreground">
                 {mode === "artist"
                   ? "Profile, portfolio, calendar, trusted payments, customer reviews, and repeat bookings—together in one professional home."
                   : "Booking history, secure payment, customer support, cancellation protection, rewards, reviews, and one-click rebooking keep every celebration easier."}
               </p>
-              <div className="mt-8 flex flex-wrap gap-5 text-xs">
-                <span className="flex gap-2">
-                  <BadgeCheck />
-                  Verified artists
-                </span>
-                <span className="flex gap-2">
-                  <CreditCard />
-                  Secure payments
-                </span>
-                <span className="flex gap-2">
-                  <Headphones />
-                  Human support
-                </span>
+              <div className="mt-9 flex flex-wrap gap-3 text-xs font-semibold">
+                {[
+                  { icon: BadgeCheck, label: "Verified artists" },
+                  { icon: CreditCard, label: "Secure payments" },
+                  { icon: Headphones, label: "Human support" },
+                ].map(({ icon: Icon, label }) => (
+                  <span
+                    key={label}
+                    className="flex items-center gap-2 rounded-full bg-card px-4 py-2.5 ring-1 ring-border"
+                  >
+                    <Icon className="size-4 text-gold" />
+                    {label}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
         </section>
         <section className="bg-primary px-5 py-28 text-primary-foreground md:px-8 md:py-36">
           <div className="mx-auto max-w-[1440px] text-center">
-            <ShieldCheck className="mx-auto mb-7 text-secondary" />
-            <h2 className="mx-auto max-w-4xl text-6xl leading-none md:text-8xl">{finalTitle}</h2>
-            <Button asChild variant="inverse" size="editorial" className="mt-10">
+            <ShieldCheck className="mx-auto mb-7 size-8 text-gold" strokeWidth={1.5} />
+            <h2 className="mx-auto max-w-4xl text-5xl leading-[1.02] md:text-7xl">{finalTitle}</h2>
+            <Button asChild variant="gold" size="editorial" className="mt-10 font-semibold">
               <Link href={mode === "artist" ? "/dashboard" : "/artists"}>
                 {mode === "artist" ? "Create Your Artist Profile" : "Find My Artist"}
                 <ArrowRight />

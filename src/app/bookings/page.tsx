@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
-import { Check, ChevronLeft, ChevronRight, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { Check, ChevronLeft, ChevronRight, Flower2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ananya from "@/assets/artist-ananya.jpg";
 
@@ -21,19 +22,31 @@ function Booking() {
   const [step, setStep] = useState(0);
   return (
     <main className="min-h-screen bg-background">
-      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center border-b border-border px-5 py-4 md:px-8">
-        <p className="font-display text-2xl">Mehndi Connect</p>
-        <span className="text-xs text-muted-foreground">Protected booking</span>
+      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center border-b border-border bg-primary px-5 py-4 text-primary-foreground md:px-8">
+        <Link href="/" className="flex items-center gap-2.5">
+          <span className="flex size-8 items-center justify-center rounded-lg border border-gold/40 bg-gold/10 text-gold">
+            <Flower2 className="size-4" strokeWidth={1.75} />
+          </span>
+          <span className="leading-none">
+            <span className="block font-sans text-sm font-extrabold tracking-[0.16em]">MEHNDI</span>
+            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-gold">
+              CONNECT
+            </span>
+          </span>
+        </Link>
+        <span className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground/70">
+          <ShieldCheck className="size-4 text-gold" /> Protected booking
+        </span>
       </header>
       <div className="h-1 bg-secondary">
         <div
-          className="h-full bg-primary transition-all"
+          className="h-full bg-gold transition-all"
           style={{ width: `${(step + 1) * 10}%` }}
         />
       </div>
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-10 md:grid-cols-[1fr_300px] md:px-8 md:py-16">
         <section>
-          <p className="text-[10px] uppercase text-muted-foreground">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
             Step {step + 1} of 10 · {steps[step]}
           </p>
           <h1 className="mt-4 text-5xl md:text-7xl">
@@ -42,7 +55,9 @@ function Booking() {
           <div className="mt-10 min-h-72 border-y border-border py-7">
             {step === 9 ? (
               <div>
-                <Check className="mb-6 size-10" />
+                <span className="mb-6 flex size-14 items-center justify-center rounded-full bg-primary text-gold">
+                  <Check className="size-7" />
+                </span>
                 <p className="text-lg">
                   Ananya has received your request for 24 September at 4:00 PM.
                 </p>
@@ -61,9 +76,9 @@ function Booking() {
                 ].map((x, i) => (
                   <button
                     key={x}
-                    className={`border p-5 text-left transition ${i === 0 ? "border-primary bg-secondary" : "border-border hover:bg-secondary"}`}
+                    className={`rounded-xl border p-5 text-left transition ${i === 0 ? "border-primary bg-gold/15" : "border-border bg-card hover:bg-secondary"}`}
                   >
-                    <span className="block text-xs text-muted-foreground">0{i + 1}</span>
+                    <span className="block text-xs font-bold text-gold">0{i + 1}</span>
                     <strong className="mt-6 block">
                       {step === 0
                         ? [
@@ -94,32 +109,32 @@ function Booking() {
             </Button>
           </div>
         </section>
-        <aside className="h-fit border border-border p-5 md:sticky md:top-8">
+        <aside className="h-fit rounded-2xl bg-card p-5 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(15,43,32,0.25)] md:sticky md:top-8">
           <img
             src={ananya.src}
             alt="Ananya Kulkarni"
             width={912}
             height={1200}
-            className="aspect-video w-full object-cover"
+            className="aspect-video w-full rounded-xl object-cover"
           />
           <h2 className="mt-5 font-sans text-lg font-semibold">Ananya Kulkarni</h2>
-          <p className="text-sm text-muted-foreground">Bridal & Arabic · Bandra</p>
+          <p className="text-sm text-muted-foreground">Bridal &amp; Arabic · Bandra</p>
           <dl className="mt-6 space-y-3 border-y border-border py-5 text-sm">
             <div className="flex justify-between">
-              <dt>Service</dt>
-              <dd>Bridal signature</dd>
+              <dt className="text-muted-foreground">Service</dt>
+              <dd className="font-semibold">Bridal signature</dd>
             </div>
             <div className="flex justify-between">
-              <dt>Advance</dt>
-              <dd>₹2,400</dd>
+              <dt className="text-muted-foreground">Advance</dt>
+              <dd className="font-semibold text-primary">₹2,400</dd>
             </div>
             <div className="flex justify-between">
-              <dt>After service</dt>
-              <dd>₹9,600</dd>
+              <dt className="text-muted-foreground">After service</dt>
+              <dd className="font-semibold">₹9,600</dd>
             </div>
           </dl>
           <p className="mt-5 flex gap-2 text-xs text-muted-foreground">
-            <ShieldCheck className="size-4 shrink-0" />
+            <ShieldCheck className="size-4 shrink-0 text-gold" />
             Booking through Mehndi Connect keeps your booking protected.
           </p>
         </aside>
