@@ -43,7 +43,7 @@ function ArtistsPage() {
           </div>
         </section>
         <div className="relative z-10 -mt-14 px-5 md:px-8">
-          <div className="mx-auto grid max-w-[1240px] overflow-hidden rounded-2xl bg-card shadow-[0_24px_60px_-20px_rgba(17,18,13,0.35)] ring-1 ring-border md:grid-cols-[1.2fr_1fr_1fr_auto]">
+          <div className="mx-auto grid max-w-[1240px] overflow-hidden rounded-2xl bg-card shadow-[0_24px_60px_-20px_rgba(23,22,19,0.35)] ring-1 ring-border md:grid-cols-[1.2fr_1fr_1fr_auto]">
             {[
               { label: "Location", value: "Mumbai, Maharashtra", icon: MapPin },
               { label: "Style", value: "Bridal & Arabic", icon: Sparkles },

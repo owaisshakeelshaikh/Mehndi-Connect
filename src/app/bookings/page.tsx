@@ -24,23 +24,23 @@ function Booking() {
     <main className="min-h-screen bg-background">
       <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center border-b border-border bg-primary px-5 py-4 text-primary-foreground md:px-8">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex size-8 items-center justify-center rounded-lg border border-ivory/40 bg-ivory/10 text-ivory">
+          <span className="flex size-8 items-center justify-center rounded-lg border border-saffron/40 bg-saffron/10 text-saffron">
             <Flower2 className="size-4" strokeWidth={1.75} />
           </span>
           <span className="leading-none">
             <span className="block font-sans text-sm font-extrabold tracking-[0.16em]">MEHNDI</span>
-            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-ivory">
+            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-saffron">
               CONNECT
             </span>
           </span>
         </Link>
         <span className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary-foreground/70">
-          <ShieldCheck className="size-4 text-ivory" /> Protected booking
+          <ShieldCheck className="size-4 text-saffron" /> Protected booking
         </span>
       </header>
       <div className="h-1 bg-secondary">
         <div
-          className="h-full bg-gold transition-all"
+          className="h-full bg-saffron transition-all"
           style={{ width: `${(step + 1) * 10}%` }}
         />
       </div>
@@ -55,7 +55,7 @@ function Booking() {
           <div className="mt-10 min-h-72 border-y border-border py-7">
             {step === 9 ? (
               <div>
-                <span className="mb-6 flex size-14 items-center justify-center rounded-full bg-primary text-ivory">
+                <span className="mb-6 flex size-14 items-center justify-center rounded-full bg-primary text-saffron">
                   <Check className="size-7" />
                 </span>
                 <p className="text-lg">
@@ -76,7 +76,7 @@ function Booking() {
                 ].map((x, i) => (
                   <button
                     key={x}
-                    className={`rounded-xl border p-5 text-left transition ${i === 0 ? "border-primary bg-gold/15" : "border-border bg-card hover:bg-secondary"}`}
+                    className={`rounded-xl border p-5 text-left transition ${i === 0 ? "border-primary bg-saffron/15" : "border-border bg-card hover:bg-secondary"}`}
                   >
                     <span className="block text-xs font-bold text-gold">0{i + 1}</span>
                     <strong className="mt-6 block">
@@ -109,7 +109,7 @@ function Booking() {
             </Button>
           </div>
         </section>
-        <aside className="h-fit rounded-2xl bg-card p-5 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(17,18,13,0.25)] md:sticky md:top-8">
+        <aside className="h-fit rounded-2xl bg-card p-5 ring-1 ring-border shadow-[0_20px_50px_-20px_rgba(23,22,19,0.25)] md:sticky md:top-8">
           <img
             src={ananya.src}
             alt="Ananya Kulkarni"

@@ -9,7 +9,7 @@ export function NewsletterForm() {
 
   if (done) {
     return (
-      <p className="flex h-12 items-center gap-2 text-sm font-semibold text-ivory">
+      <p className="flex h-12 items-center gap-2 text-sm font-semibold text-saffron">
         <Check className="size-4" /> You&apos;re subscribed. Welcome to the family.
       </p>
     );
@@ -28,7 +28,7 @@ export function NewsletterForm() {
         required
         placeholder="Enter your email"
         aria-label="Email address"
-        className="h-12 min-w-0 flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-4 text-sm text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/50 focus:border-ivory"
+        className="h-12 min-w-0 flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-4 text-sm text-primary-foreground outline-none transition-colors placeholder:text-primary-foreground/50 focus:border-saffron"
       />
       <Button
         type="submit"

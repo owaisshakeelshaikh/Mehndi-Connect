@@ -31,7 +31,7 @@ function Designs() {
             <h1 className="text-7xl leading-[0.9] md:text-9xl">
               Find Your
               <br />
-              <em className="text-ivory">Mehndi.</em>
+              <em className="text-saffron">Mehndi.</em>
             </h1>
             <p className="mt-7 max-w-md text-sm leading-7 text-primary-foreground/70">
               Start with a line, a motif, or a feeling. Then discover the artist who can make it
@@ -93,7 +93,7 @@ function Designs() {
                 <Link
                   key={x}
                   href="/artists"
-                  className="group rounded-2xl bg-card p-6 ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-16px_rgba(17,18,13,0.25)] md:p-8"
+                  className="group rounded-2xl bg-card p-6 ring-1 ring-border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-16px_rgba(23,22,19,0.25)] md:p-8"
                 >
                   <span className="font-display text-2xl text-gold">0{i + 1}</span>
                   <h3 className="mt-8 font-sans text-base font-bold transition-colors group-hover:text-pine">
@@ -105,7 +105,7 @@ function Designs() {
           </div>
         </section>
         <section className="px-5 py-20 md:px-8 md:py-24">
-          <div className="mx-auto grid max-w-[1440px] gap-8 rounded-2xl bg-primary px-8 py-12 text-primary-foreground shadow-[0_24px_60px_-24px_rgba(17,18,13,0.5)] md:grid-cols-[1fr_auto] md:items-center md:px-14">
+          <div className="mx-auto grid max-w-[1440px] gap-8 rounded-2xl bg-primary px-8 py-12 text-primary-foreground shadow-[0_24px_60px_-24px_rgba(23,22,19,0.5)] md:grid-cols-[1fr_auto] md:items-center md:px-14">
             <div>
               <Eyebrow tone="dark">Visual matching</Eyebrow>
               <h2 className="text-5xl md:text-6xl">Have a reference?</h2>

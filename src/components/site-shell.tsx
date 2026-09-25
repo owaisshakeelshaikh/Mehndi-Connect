@@ -27,7 +27,7 @@ const nav = [
 function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2.5">
-      <span className="flex size-9 items-center justify-center rounded-lg border border-ivory/40 bg-ivory/10 text-ivory">
+      <span className="flex size-9 items-center justify-center rounded-lg border border-saffron/40 bg-saffron/10 text-saffron">
         <Flower2 className="size-4.5" strokeWidth={1.75} />
       </span>
       <span className="leading-none">
@@ -36,7 +36,7 @@ function Logo({ compact = false }: { compact?: boolean }) {
         </span>
         <span
           className={cn(
-            "block font-sans font-semibold tracking-[0.34em] text-ivory",
+            "block font-sans font-semibold tracking-[0.34em] text-saffron",
             compact ? "text-[8px]" : "text-[9px]",
           )}
         >
@@ -70,9 +70,9 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
               "inset-x-3 top-3 rounded-2xl md:inset-x-6 md:top-4",
               overlay
                 ? "border-transparent bg-transparent"
-                : "border-ivory/15 bg-primary/85 backdrop-blur-md",
+                : "border-parchment/15 bg-primary/85 backdrop-blur-md",
             )
-          : "inset-x-0 top-0 rounded-b-2xl border-x-0 border-t-0 border-b border-ivory/15 bg-primary/95 backdrop-blur-xl",
+          : "inset-x-0 top-0 rounded-b-2xl border-x-0 border-t-0 border-b border-parchment/15 bg-primary/95 backdrop-blur-xl",
       )}
     >
       <div
@@ -87,7 +87,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
             <Link
               key={to}
               href={to}
-              className="link-underline text-[10px] font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors duration-300 hover:text-ivory"
+              className="link-underline text-[10px] font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors duration-300 hover:text-saffron"
             >
               {label}
             </Link>
@@ -96,7 +96,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
         <div className="flex shrink-0 items-center gap-2 sm:gap-4">
           <Link
             href="/account"
-            className="link-underline hidden text-[10px] font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors hover:text-ivory xl:block"
+            className="link-underline hidden text-[10px] font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors hover:text-saffron xl:block"
           >
             Sign in
           </Link>
@@ -111,7 +111,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           <Button
             variant="ghost"
             size="icon"
-            className="hover:bg-ivory/15 hover:text-ivory lg:hidden"
+            className="hover:bg-saffron/15 hover:text-saffron lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((value) => !value)}
           >
@@ -122,7 +122,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
       <nav
         aria-label="Mobile navigation"
         className={cn(
-          "grid overflow-hidden border-ivory/15 bg-primary/95 backdrop-blur-xl transition-all duration-500 ease-editorial lg:hidden",
+          "grid overflow-hidden border-parchment/15 bg-primary/95 backdrop-blur-xl transition-all duration-500 ease-editorial lg:hidden",
           open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr]",
         )}
       >
@@ -202,7 +202,7 @@ export function SiteFooter() {
     ],
   ];
   return (
-    <footer className="border-t border-ivory/15 bg-primary px-5 pb-28 pt-16 text-primary-foreground md:px-8 md:pb-8">
+    <footer className="border-t border-parchment/15 bg-primary px-5 pb-28 pt-16 text-primary-foreground md:px-8 md:pb-8">
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-12 border-b border-primary-foreground/10 pb-12 lg:grid-cols-[1.1fr_2fr]">
           <div>
@@ -217,7 +217,7 @@ export function SiteFooter() {
                   key={i}
                   href="#"
                   aria-label="Social link"
-                  className="flex size-9 items-center justify-center rounded-full border border-primary-foreground/15 text-primary-foreground/70 transition-colors hover:border-ivory hover:text-ivory"
+                  className="flex size-9 items-center justify-center rounded-full border border-primary-foreground/15 text-primary-foreground/70 transition-colors hover:border-saffron hover:text-saffron"
                 >
                   <Icon className="size-4" />
                 </a>
@@ -225,7 +225,7 @@ export function SiteFooter() {
               <a
                 href="#"
                 aria-label="Pinterest"
-                className="flex size-9 items-center justify-center rounded-full border border-primary-foreground/15 text-[10px] font-bold text-primary-foreground/70 transition-colors hover:border-ivory hover:text-ivory"
+                className="flex size-9 items-center justify-center rounded-full border border-primary-foreground/15 text-[10px] font-bold text-primary-foreground/70 transition-colors hover:border-saffron hover:text-saffron"
               >
                 Pi
               </a>
@@ -234,7 +234,7 @@ export function SiteFooter() {
           <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
             {groups.map(([title, items]) => (
               <div key={title}>
-                <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-ivory">
+                <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-saffron">
                   {title}
                 </p>
                 <ul className="space-y-3 text-sm text-primary-foreground/70">
@@ -243,7 +243,7 @@ export function SiteFooter() {
                       <li key={item[0]}>
                         <Link
                           href={item[1] as "/dashboard"}
-                          className="transition-colors hover:text-ivory"
+                          className="transition-colors hover:text-saffron"
                         >
                           {item[0]}
                         </Link>
@@ -256,20 +256,20 @@ export function SiteFooter() {
               </div>
             ))}
             <div>
-              <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-ivory">
+              <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-saffron">
                 Contact Us
               </p>
               <ul className="space-y-4 text-sm text-primary-foreground/70">
                 <li className="flex gap-2.5">
-                  <MapPin className="mt-0.5 size-3.5 shrink-0 text-ivory" />
+                  <MapPin className="mt-0.5 size-3.5 shrink-0 text-saffron" />
                   Bandra West, Mumbai 400050
                 </li>
                 <li className="flex gap-2.5">
-                  <Phone className="mt-0.5 size-3.5 shrink-0 text-ivory" />
+                  <Phone className="mt-0.5 size-3.5 shrink-0 text-saffron" />
                   +91 98200 12345
                 </li>
                 <li className="flex gap-2.5">
-                  <Mail className="mt-0.5 size-3.5 shrink-0 text-ivory" />
+                  <Mail className="mt-0.5 size-3.5 shrink-0 text-saffron" />
                   hello@mehndiconnect.in
                 </li>
               </ul>

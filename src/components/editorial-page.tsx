@@ -55,7 +55,7 @@ export function EditorialPage({
                 <Reveal
                   key={c.number}
                   delay={i * 90}
-                  className="min-h-64 rounded-2xl bg-card p-7 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(17,18,13,0.15)] transition-shadow duration-500 hover:shadow-[0_16px_40px_-16px_rgba(17,18,13,0.25)] md:p-10"
+                  className="min-h-64 rounded-2xl bg-card p-7 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(23,22,19,0.15)] transition-shadow duration-500 hover:shadow-[0_16px_40px_-16px_rgba(23,22,19,0.25)] md:p-10"
                 >
                   <span className="font-display text-5xl text-gold/60">{c.number}</span>
                   <h3 className="mt-12 font-sans text-lg font-bold">{c.title}</h3>
@@ -109,7 +109,7 @@ export function EditorialPage({
         </section>
         <section className="bg-primary px-5 py-28 text-primary-foreground md:px-8 md:py-36">
           <div className="mx-auto max-w-[1440px] text-center">
-            <ShieldCheck className="mx-auto mb-7 size-8 text-ivory" strokeWidth={1.5} />
+            <ShieldCheck className="mx-auto mb-7 size-8 text-saffron" strokeWidth={1.5} />
             <h2 className="mx-auto max-w-4xl text-5xl leading-[1.02] md:text-7xl">{finalTitle}</h2>
             <Button asChild variant="inverse" size="editorial" className="mt-10 font-semibold">
               <Link href={mode === "artist" ? "/dashboard" : "/artists"}>

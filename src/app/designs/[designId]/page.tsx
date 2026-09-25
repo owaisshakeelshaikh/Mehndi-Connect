@@ -43,15 +43,15 @@ function Detail() {
               </p>
               <div className="mt-8 grid grid-cols-2 gap-5 border-y border-primary-foreground/15 py-6 text-sm text-primary-foreground/80">
                 <span>
-                  <Sparkles className="mb-2 size-4 text-ivory" />
+                  <Sparkles className="mb-2 size-4 text-saffron" />
                   Traditional bridal
                 </span>
                 <span>
-                  <Clock className="mb-2 size-4 text-ivory" />
+                  <Clock className="mb-2 size-4 text-saffron" />
                   6–8 hours
                 </span>
                 <span>
-                  <Gauge className="mb-2 size-4 text-ivory" />
+                  <Gauge className="mb-2 size-4 text-saffron" />
                   High complexity
                 </span>
                 <span>Wedding · Full hands</span>

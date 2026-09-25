@@ -15,14 +15,14 @@ export function DashboardShell({
 }) {
   return (
     <div className="min-h-screen bg-background">
-      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-ivory/15 bg-primary px-4 py-4 text-primary-foreground md:px-8">
+      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-parchment/15 bg-primary px-4 py-4 text-primary-foreground md:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-2.5">
-          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-ivory/40 bg-ivory/10 text-ivory">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-saffron/40 bg-saffron/10 text-saffron">
             <Flower2 className="size-4" strokeWidth={1.75} />
           </span>
           <span className="leading-none">
             <span className="block font-sans text-sm font-extrabold tracking-[0.16em]">MEHNDI</span>
-            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-ivory">
+            <span className="block font-sans text-[8px] font-semibold tracking-[0.34em] text-saffron">
               CONNECT
             </span>
           </span>
@@ -32,7 +32,7 @@ export function DashboardShell({
             variant="ghost"
             size="icon"
             aria-label="Search"
-            className="hover:bg-ivory/15 hover:text-ivory"
+            className="hover:bg-saffron/15 hover:text-saffron"
           >
             <Search />
           </Button>
@@ -40,14 +40,14 @@ export function DashboardShell({
             variant="ghost"
             size="icon"
             aria-label="Notifications"
-            className="hover:bg-ivory/15 hover:text-ivory"
+            className="hover:bg-saffron/15 hover:text-saffron"
           >
             <Bell />
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="hover:bg-ivory/15 hover:text-ivory md:hidden"
+            className="hover:bg-saffron/15 hover:text-saffron md:hidden"
             aria-label="Menu"
           >
             <Menu />
@@ -85,7 +85,7 @@ export function DashboardShell({
 
 export function Metric({ label, value, note }: { label: string; value: string; note: string }) {
   return (
-    <div className="rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(17,18,13,0.15)]">
+    <div className="rounded-2xl bg-card p-6 ring-1 ring-border shadow-[0_10px_30px_-16px_rgba(23,22,19,0.15)]">
       <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
         {label}
       </p>

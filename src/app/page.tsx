@@ -145,7 +145,7 @@ function Index() {
             height={1280}
             className="absolute inset-0 h-full w-full animate-[hero-image-in_1.6s_cubic-bezier(0.22,1,0.36,1)_both] object-cover object-[70%_top]"
           />
-          <div className="absolute inset-0 bg-charcoal/30" />
+          <div className="absolute inset-0 bg-ink/30" />
           <div className="relative mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-end px-5 pb-32 pt-28 md:px-8">
             <h1 className="max-w-3xl text-[3rem] leading-[1.02] sm:text-6xl md:text-7xl">
               <span className="hero-line">
@@ -186,7 +186,7 @@ function Index() {
 
         {/* ——— Search card ——— */}
         <div className="relative z-10 -mt-16 px-5 md:px-8">
-          <div className="mx-auto grid max-w-[1240px] animate-[fade-up_0.9s_cubic-bezier(0.22,1,0.36,1)_0.85s_both] overflow-hidden rounded-2xl bg-card shadow-[0_24px_60px_-20px_rgba(17,18,13,0.35)] ring-1 ring-border md:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+          <div className="mx-auto grid max-w-[1240px] animate-[fade-up_0.9s_cubic-bezier(0.22,1,0.36,1)_0.85s_both] overflow-hidden rounded-2xl bg-card shadow-[0_24px_60px_-20px_rgba(23,22,19,0.35)] ring-1 ring-border md:grid-cols-[1fr_1fr_1fr_1fr_auto]">
             {searchFields.map(({ label, value, icon: Icon }) => (
               <button
                 key={label}
@@ -272,9 +272,9 @@ function Index() {
                 <Reveal
                   key={title}
                   delay={i * 100}
-                  className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(17,18,13,0.05),0_10px_30px_-14px_rgba(17,18,13,0.15)] ring-1 ring-border transition-shadow duration-500 hover:shadow-[0_16px_40px_-16px_rgba(17,18,13,0.25)]"
+                  className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(23,22,19,0.05),0_10px_30px_-14px_rgba(23,22,19,0.15)] ring-1 ring-border transition-shadow duration-500 hover:shadow-[0_16px_40px_-16px_rgba(23,22,19,0.25)]"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-primary text-ivory">
+                  <span className="flex size-12 items-center justify-center rounded-full bg-primary text-saffron">
                     <Icon className="size-5" strokeWidth={1.75} />
                   </span>
                   <h3 className="mt-6 font-sans text-base font-bold">{title}</h3>
@@ -287,11 +287,11 @@ function Index() {
 
         {/* ——— Stats bar ——— */}
         <section className="px-5 pb-16 md:px-8 md:pb-20">
-          <Reveal className="mx-auto max-w-[1440px] rounded-2xl bg-primary px-8 py-12 text-primary-foreground shadow-[0_24px_60px_-24px_rgba(17,18,13,0.5)] md:px-14 md:py-14">
+          <Reveal className="mx-auto max-w-[1440px] rounded-2xl bg-primary px-8 py-12 text-primary-foreground shadow-[0_24px_60px_-24px_rgba(23,22,19,0.5)] md:px-14 md:py-14">
             <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
               {stats.map(({ icon: Icon, title, label }) => (
                 <div key={title} className="flex items-center gap-4">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-ivory/40 bg-ivory/10 text-ivory">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-saffron/40 bg-saffron/10 text-saffron">
                     <Icon className="size-5" strokeWidth={1.75} />
                   </span>
                   <span>
@@ -317,7 +317,7 @@ function Index() {
                 alt="Ananya, a Mehndi artist, at work"
                 width={912}
                 height={1200}
-                className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_24px_60px_-24px_rgba(17,18,13,0.4)]"
+                className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_24px_60px_-24px_rgba(23,22,19,0.4)]"
               />
 
             </Reveal>
@@ -339,7 +339,7 @@ function Index() {
                 <ul className="mt-8 space-y-4">
                   {checklist.map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm font-medium">
-                      <span className="flex size-6 items-center justify-center rounded-full bg-primary text-ivory">
+                      <span className="flex size-6 items-center justify-center rounded-full bg-primary text-saffron">
                         <BadgeCheck className="size-3.5" />
                       </span>
                       {item}
@@ -408,7 +408,7 @@ function Index() {
             <Reveal variant="none" className="relative">
               <div className="absolute inset-x-0 top-0 h-px bg-border" aria-hidden />
               <div
-                className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gold transition-transform duration-[1800ms] ease-editorial group-[.is-visible]/reveal:scale-x-100"
+                className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-saffron transition-transform duration-[1800ms] ease-editorial group-[.is-visible]/reveal:scale-x-100"
                 aria-hidden
               />
               <div className="no-scrollbar flex snap-x overflow-x-auto border-b border-border md:grid md:grid-cols-6">
@@ -456,7 +456,7 @@ function Index() {
                 <Reveal key={o.name} delay={i * 90}>
                   <Link
                     href="/artists"
-                    className="group block overflow-hidden rounded-2xl bg-card ring-1 ring-border transition-all duration-500 ease-editorial hover:-translate-y-1 hover:shadow-[0_16px_40px_-16px_rgba(17,18,13,0.25)]"
+                    className="group block overflow-hidden rounded-2xl bg-card ring-1 ring-border transition-all duration-500 ease-editorial hover:-translate-y-1 hover:shadow-[0_16px_40px_-16px_rgba(23,22,19,0.25)]"
                   >
                     <div className="overflow-hidden">
                       <img

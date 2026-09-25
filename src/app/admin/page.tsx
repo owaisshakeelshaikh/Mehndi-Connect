@@ -60,8 +60,8 @@ function Admin() {
             ))}
           </div>
         </section>
-        <section className="rounded-2xl bg-primary p-8 text-primary-foreground shadow-[0_20px_50px_-20px_rgba(17,18,13,0.4)]">
-          <ShieldCheck className="mb-7 text-ivory" />
+        <section className="rounded-2xl bg-primary p-8 text-primary-foreground shadow-[0_20px_50px_-20px_rgba(23,22,19,0.4)]">
+          <ShieldCheck className="mb-7 text-saffron" />
           <h2 className="text-5xl">Trust is a product surface.</h2>
           <p className="mt-5 text-sm leading-7 text-primary-foreground/70">
             Artist verification, portfolio authenticity, secure payments, cancellation support,

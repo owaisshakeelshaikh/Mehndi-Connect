@@ -62,7 +62,7 @@ export function Eyebrow({
 }) {
   return (
     <p
-      className={`mb-5 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] ${tone === "dark" ? "text-ivory" : "text-gold"}`}
+      className={`mb-5 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] ${tone === "dark" ? "text-saffron" : "text-gold"}`}
     >
       <span className="h-px w-6 bg-current opacity-60" aria-hidden />
       {children}
@@ -72,7 +72,7 @@ export function Eyebrow({
 
 export function ArtistCard({ artist = artists[0]! }: { artist?: (typeof artists)[number] }) {
   return (
-    <article className="group overflow-hidden rounded-2xl bg-card shadow-[0_1px_2px_rgba(17,18,13,0.06),0_12px_32px_-12px_rgba(17,18,13,0.18)] ring-1 ring-border transition-all duration-500 ease-editorial hover:-translate-y-1 hover:shadow-[0_1px_2px_rgba(17,18,13,0.08),0_20px_44px_-14px_rgba(17,18,13,0.28)]">
+    <article className="group overflow-hidden rounded-2xl bg-card shadow-[0_1px_2px_rgba(23,22,19,0.06),0_12px_32px_-12px_rgba(23,22,19,0.18)] ring-1 ring-border transition-all duration-500 ease-editorial hover:-translate-y-1 hover:shadow-[0_1px_2px_rgba(23,22,19,0.08),0_20px_44px_-14px_rgba(23,22,19,0.28)]">
       <Link
         href="/artists/ananya-kulkarni"
         className="relative block aspect-[4/3] overflow-hidden"
@@ -87,7 +87,7 @@ export function ArtistCard({ artist = artists[0]! }: { artist?: (typeof artists)
         />
         <span className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/15" />
         <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.16em] text-primary-foreground shadow-md">
-          <BadgeCheck className="size-3 text-ivory" /> Verified
+          <BadgeCheck className="size-3 text-saffron" /> Verified
         </span>
         <button
           type="button"
@@ -105,7 +105,7 @@ export function ArtistCard({ artist = artists[0]! }: { artist?: (typeof artists)
         <p className="mt-0.5 text-sm font-medium text-muted-foreground">{artist.specialty}</p>
         <div className="mt-4 flex items-center gap-4 border-t border-border pt-4 text-[13px] font-medium text-muted-foreground">
           <span className="flex items-center gap-1.5">
-            <Star className="size-4 fill-gold text-gold" />
+            <Star className="size-4 fill-saffron text-saffron" />
             <span className="font-bold text-foreground">{artist.rating}</span> ({artist.reviews})
           </span>
           <span className="flex items-center gap-1.5">
@@ -152,7 +152,7 @@ export function DesignGrid({ compact = false }: { compact?: boolean }) {
         >
           <Link
             href={`/designs/${item.name.toLowerCase().replaceAll(" ", "-")}`}
-            className="group relative block h-full overflow-hidden rounded-xl shadow-[0_10px_30px_-12px_rgba(17,18,13,0.25)]"
+            className="group relative block h-full overflow-hidden rounded-xl shadow-[0_10px_30px_-12px_rgba(23,22,19,0.25)]"
           >
           <img
             src={item.image.src}
@@ -165,7 +165,7 @@ export function DesignGrid({ compact = false }: { compact?: boolean }) {
           <span className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent transition-colors duration-500 group-hover:from-primary/80" />
           <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-3.5 text-primary-foreground md:p-5">
             <div className="translate-y-1 transition-transform duration-500 ease-editorial group-hover:translate-y-0">
-              <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-ivory">
+              <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-saffron">
                 {item.style}
               </span>
               <p className="font-display text-xl leading-tight md:text-2xl">{item.name}</p>
@@ -180,12 +180,12 @@ export function DesignGrid({ compact = false }: { compact?: boolean }) {
       ))}
       {!compact && (
         <Reveal delay={360} className="hidden md:col-span-3 md:block">
-          <div className="flex h-full flex-col overflow-hidden rounded-xl bg-primary p-6 text-primary-foreground shadow-[0_10px_30px_-12px_rgba(17,18,13,0.25)]">
-            <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-ivory">
+          <div className="flex h-full flex-col overflow-hidden rounded-xl bg-primary p-6 text-primary-foreground shadow-[0_10px_30px_-12px_rgba(23,22,19,0.25)]">
+            <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-saffron">
               The archive
             </span>
             <p className="mt-4 font-display text-5xl leading-none">
-              300<span className="text-ivory">+</span>
+              300<span className="text-saffron">+</span>
             </p>
             <p className="mt-2 text-[13px] leading-6 text-primary-foreground/65">
               designs, and counting — from bridal storytelling to quiet minimal lines.
@@ -210,7 +210,7 @@ export function DesignGrid({ compact = false }: { compact?: boolean }) {
               ))}
             </div>
             <p className="mt-3 flex items-center gap-2 text-[11px] font-semibold text-primary-foreground/55">
-              <span className="size-1.5 rounded-full bg-ivory" aria-hidden />
+              <span className="size-1.5 rounded-full bg-saffron" aria-hidden />
               24 new designs added this week
             </p>
             <div className="mt-5 flex flex-1 items-end">
